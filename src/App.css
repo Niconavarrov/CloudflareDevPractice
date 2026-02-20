@@ -41,5 +41,147 @@
 }
 
 .read-the-docs {
+		text-align: center;
+		padding: 10px;
         color: #888;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+.bmi-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch; /* make both children same height */
+}
+
+.bmi-table {
+  width: 300px; /* match calculator width */
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #1d2239;
+  box-sizing: border-box;
+}
+
+.bmi-table,
+.bmi-calculator {
+  height: 420px; /* increased height to match water-info */
+}
+
+.bmi-table th,
+.bmi-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+.bmi-table .highlight {
+  /* fallback yellow */
+  background: #ffeb3b;
+}
+
+.bmi-table .bajo {
+  background: #ffeb3b; /* amarillo */
+}
+
+.bmi-table .normal {
+  background: #c8e6c9; /* verde claro */
+}
+
+.bmi-table .sobrepeso {
+  background: #ffcc80; /* anaranjado */
+}
+
+.bmi-table .obesidad {
+  background: #ff8a80; /* rojo claro */
+}
+
+.bmi-calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 300px; /* fixed size for parity with table */
+  box-sizing: border-box;
+}
+
+.bmi-calculator label {
+  color:#1d2239; 
+  font-weight: bold;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  margin-bottom: 0.25rem;
+}
+
+.field input {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.result {
+	color:#bda205; 
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.water-info {
+  margin: 0; /* remove top margin so it aligns with siblings */
+  padding: 1rem; /* match other boxes */
+  background: #e3f2fd;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  color: #1d2239;
+  width: 300px;
+  height: 420px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+.water-bar-container {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.water-bar {
+  width: 40px;
+  background: #42a5f5;
+  transition: height 0.3s ease;
+}
+
+.water-label {
+  position: absolute;
+  left: calc(50% + 28px); /* to the right side of the bar */
+  background: rgba(29,34,57,0.06);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 700;
 }
